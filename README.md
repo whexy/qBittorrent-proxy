@@ -19,16 +19,15 @@ By implementing these features, qBittorrent-proxy enables peers to actively conn
 
 The free [IP to Country Lite database](https://db-ip.com/db/download/ip-to-country-lite) by [DB-IP](https://db-ip.com/) is used for resolving the countries of peers. The database is licensed under the [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
-### Installation:
-For installation, follow the instructions from INSTALL file, but simple:
+### Compile and Test:
+For compile and test, follow the instructions from INSTALL file, but simple:
 
 ```
-./configure
-make && make install
-qbittorrent
+docker build -t qbit-proxy .
+docker run -e DISPLAY=host.docker.internal:0 -it --rm qbit-proxy qbittorrent
 ```
 
-will install and execute qBittorrent hopefully without any problem.
+will build and execute qBittorrent hopefully without any problem.
 
 ------------------------------------------
 whexy \<whexy@outlook.com\>
